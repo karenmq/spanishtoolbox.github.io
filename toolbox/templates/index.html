@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <!--instructions-->
+
+    <div>
+        <!--<p>Welcome! This is a tool box to help you type Spanish punctuation marks and diacritics, such as acute accents, the tilde &ntilde;, and the diaeresis.</p>-->
+        <p>Click on a character to copy it direclty to your keyboard, or, toggle the textbox to create longer words and phrases!</p>
+    </div>
+
+    <!--character buttons-->
+
+    <div class="alpha-characters">
+        <button class="char" onclick="copy_a('paste')" id="a">&aacute;</button>
+        <button class="char" onclick="copy_e()" id="e">&eacute;</button>
+        <button class="char" onclick="copy_i()" id="i">&iacute;</button>
+        <button class="char" onclick="copy_o()" id="o">&oacute;</button>
+        <button class="char" onclick="copy_u()" id="u">&uacute;</button>
+        <button class="char" onclick="copy_umlaut_lower()" id="umlaut_lower">&uuml;</button>
+        <button class="char" onclick="copy_tilde_lower()" id="tilde_lower">&ntilde;</button></br>
+
+        <button class="char" onclick="copy_a_upper()" id="a_upper">&Aacute;</button>
+        <button class="char" onclick="copy_e_upper()" id="e_upper">&Eacute;</button>
+        <button class="char" onclick="copy_i_upper()" id="i_upper">&Iacute;</button>
+        <button class="char" onclick="copy_o_upper()" id="o_upper">&Oacute;</button>
+        <button class="char" onclick="copy_u_upper()" id="u_upper">&Uacute;</button>
+        <button class="char" onclick="copy_umlaut_upper()" id="umlaut_upper">&Uuml;</button>
+        <button class="char" onclick="copy_tilde_upper()" id="tilde_upper">&Ntilde;</button></br>
+
+        <button class="char" onclick="copy_exclamation()" id="exclamation">&#161;</button>
+        <button class="char" onclick="copy_question()" id="question">&#191;</button>
+        </div>
+
+    </div>
+
+    <!--collapsible-->
+
+    <button type="button" class="collapsible">Textbox</button>
+    <div class="content">
+
+        <!--favorites drop down-->
+        <div class="your-favorites">
+
+            <select>
+                <option disabled selected value>Log in to see your favorite words and phrases!</option>
+            </select>
+
+        </div>
+
+        <!--text box-->
+        <div class="your-text" align="left">
+
+            <textarea id="your-text" name="your-text" rows="10"></textarea>
+
+            <!--buttons-->
+            <div class="textbox_btn">
+                <button class="save_btn" onclick="login_to_save()">Save to Favorites</button>
+                <button onclick="copy()">Select & copy</button>
+                <button onclick="document.getElementById('your-text').value=''">Clear</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/scripts.js"></script>
+
+{% endblock %}

@@ -1,0 +1,245 @@
+/*GLOBAL STYLES*/
+
+body {
+    background: #E7E7E7;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'DM Mono', monospace;
+    margin-top: 75px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: #4C956C;
+    border: none;
+    border-radius: 5px;
+    color: #E7E7E7;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+}
+
+button:hover {
+    background: #6bd097;
+}
+
+footer {
+    margin: 40px;
+}
+
+
+/*CHARACTER BUTTONS*/
+
+.char {
+   background: #E7E7E7;
+   border: 3px solid;
+   border-radius: 5px;
+   border-color: #4C956C;
+   color: black;
+   cursor: pointer;
+   font-family: 'DM Mono', monospace;
+   font-size: 20px;
+   height: 60px;
+   margin: 5px;
+   width: 60px;
+}
+
+.char:hover {
+    background: none;
+    border-color: #6bd097;
+}
+
+.char:focus {
+    border-color: white;
+}
+
+
+
+/*REGISTRATION & LOGIN*/
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 200px;
+}
+
+.container-child {
+    margin: 10px;
+}
+
+@keyframes alert {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.flash {
+    color: #e63946;
+    padding: 20px;
+    animation: alert 0.5s;
+
+}
+
+input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 3px;
+    padding: 8px;
+}
+
+.log_btn {
+    background: #E7E7E7;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #4C956C;
+    color: #4C956C;
+    padding: 7px;
+}
+
+.log_btn:hover {
+    border-color: #6bd097;
+}
+
+.regular_btn {
+    background: #4C956C;
+    border: 3px solid;
+    border-color: #4C956C;
+    border-radius: 5px;
+    color: #E7E7E7;
+    padding: 6px;
+}
+
+.regular_btn:hover {
+    background: #6bd097;
+    border-color: #6bd097;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*padding-top: 20px;*/
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*COLLAPSIBLE*/
+
+select {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+    padding: 8px;
+}
+
+textarea {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 5px;
+    padding: 8px;
+    resize: none;
+    width: 98%;
+    box-sizing: border-box;
+}
+
+.collapsible {
+    background-color: #4C956C;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 30%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-top: 10px;
+    /*border-radius: 10px 10px 0px 0px;*/
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.content {
+    /*background: green;*/
+    padding: 0 18px;
+    width: 40%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin: auto
+}
+
+.portfolio_link {
+    color: #4C956C;
+}
+
+.portfolio_link:hover {
+    color: #6bd097;
+}
+
+.save_btn {
+    background: #E7E7E7;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #4C956C;
+    color: #4C956C;
+    padding: 7px;
+}
+
+.save_btn:hover {
+    border-color: #6bd097;
+    background: #E7E7E7;
+}
+
+.textbox_btn {
+    display: flex;
+    justify-content: flex-start;
+    /*background: yellow;*/
+    /*flex-direction: row;*/
+}
+
+.your-text {
+    display: inline-block;
+    /*background: red;*/
+    width: 100%;
+}
+

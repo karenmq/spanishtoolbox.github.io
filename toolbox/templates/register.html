@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--css stylesheet-->
+        <link href="/static/styles.css" rel="stylesheet">
+
+
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <title>Spanish Tool Box: Register</title>
+    </head>
+
+    <body>
+
+            <main>
+                <!--left image-->
+                <div class="split left">
+                    <img src="/static/background2.jpg">
+                </div>
+
+                <!--login form and h1-->
+                <div class="centered">
+
+                    <div class="split right">
+
+                        <h1>register</h1>
+                        <form action="/register" method="post">
+                            <div>
+                                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+                            </div>
+                            <div>
+                                <input name="password" placeholder="Password" type="password">
+                            </div>
+                            <div>
+                                <input name="confirmation" placeholder="Password (again)" type="password">
+                            </div>
+                            <button type="submit">Register</button>
+                        </form>
+
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="flash">
+                                        <strong>{{ message }}</strong>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+
+                    </div>
+
+                </div>
+
+            </main>
+    </body>
+</html>
